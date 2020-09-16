@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section" style="text-align: center;">
+    <h2>Looks like something went wrong. (500)</h2>
+    <p>We are experiencing some trouble on our end. Please try again later.</p>
+    <div class="mb-2">
+        <img style="width: 100%;" src="{{ url_for('static', filename='500.png') }}" alt="">
+    </div>
+    <a href="url_for('main.home')"><button class="btn btn-dark mb-2">Take Me Home</button></a>
+</div>
+{% endblock content %}

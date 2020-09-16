@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section" style="text-align: center;">
+    <h2>Permission Denied (403)</h2>
+    <p>You don't have permission to do that. Please check your account and try again.</p>
+    <div class="mb-2">
+        <img style="width: 100%;" src="{{ url_for('static', filename='403.png') }}" alt="">
+    </div>
+    <a href="url_for('main.home')"><button class="btn btn-dark mb-2">Take Me Home</button></a>
+</div>
+{% endblock content %}

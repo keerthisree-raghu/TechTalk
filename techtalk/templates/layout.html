@@ -35,23 +35,23 @@
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav ml-auto">
                         {% if current_user.is_authenticated %}
-                        <a class="nav-item nav-link" href="{{ url_for('create_post') }}">
+                        <a class="nav-item nav-link" href="{{ url_for('posts.create_post') }}">
                             <button type="button" class="btn btn-outline-dark">New Post</button>
                         </a>
-                        <a class="nav-item nav-link" href="{{ url_for('account') }}">
+                        <a class="nav-item nav-link" href="{{ url_for('users.account') }}">
                             <button type="button" class="btn btn-light">Account</button>
                         </a>
-                        <a class="nav-item nav-link" href="{{ url_for('logout') }}">
+                        <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">
                             <button type="button" class="btn btn-light">Logout</button>
                         </a>
-                        <a href="{{ url_for('user_posts', username=current_user.username) }}">
+                        <a href="{{ url_for('users.user_posts', username=current_user.username) }}">
                             <img src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}" class="rounded-circle user-img">
                         </a>
                         {% else %}
-                        <a class="nav-item nav-link" href="{{ url_for('login') }}">
+                        <a class="nav-item nav-link" href="{{ url_for('users.login') }}">
                             <button type="button" class="btn btn-light">Login</button>
                         </a>
-                        <a class="nav-item nav-link" href="{{ url_for('register') }}">
+                        <a class="nav-item nav-link" href="{{ url_for('users.register') }}">
                             <button type="button" class="btn btn-light">Sign Up</button>
                         </a>
                         {% endif %}
