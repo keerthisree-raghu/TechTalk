@@ -41,4 +41,4 @@ python run.py
 
 ## Demo Video
 
-[TechTalk Demo Video](https://youtu.be/QgOLxo3gq-8)
+[TechTalk Demo Video](https://youtu.be/fJCi4hs6RaY)
