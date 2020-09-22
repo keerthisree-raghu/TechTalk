@@ -35,23 +35,23 @@
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav ml-auto">
                         {% if current_user.is_authenticated %}
-                        <a class="nav-item nav-link" href="{{ url_for('posts.create_post') }}">
+                        <a class="nav-item m-2" href="{{ url_for('posts.create_post') }}">
                             <button type="button" class="btn btn-outline-dark">New Post</button>
                         </a>
-                        <a class="nav-item nav-link" href="{{ url_for('users.account') }}">
+                        <a class="nav-item m-2" href="{{ url_for('users.account') }}">
                             <button type="button" class="btn btn-light">Account</button>
                         </a>
-                        <a class="nav-item nav-link" href="{{ url_for('users.logout') }}">
+                        <a class="nav-item m-2" href="{{ url_for('users.logout') }}">
                             <button type="button" class="btn btn-light">Logout</button>
                         </a>
                         <a href="{{ url_for('users.user_posts', username=current_user.username) }}">
                             <img src="{{ url_for('static', filename='profile_pics/' + current_user.image_file) }}" class="rounded-circle user-img">
                         </a>
                         {% else %}
-                        <a class="nav-item nav-link" href="{{ url_for('users.login') }}">
+                        <a class="nav-item m-2" href="{{ url_for('users.login') }}">
                             <button type="button" class="btn btn-light">Login</button>
                         </a>
-                        <a class="nav-item nav-link" href="{{ url_for('users.register') }}">
+                        <a class="nav-item m-2" href="{{ url_for('users.register') }}">
                             <button type="button" class="btn btn-light">Sign Up</button>
                         </a>
                         {% endif %}
@@ -76,15 +76,21 @@
             </div>
             <div class="col-md-4">
                 <div class="content-section">
-                    <h3>Latest Tech News</h3>
-                    <p class='text-muted'>Find out what's happening in the tech world today.
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-light">Live Apple Event Today</li>
-                        <li class="list-group-item list-group-item-light">Google to Appear Before US Senate Antitrust Panel</li>
-                        <li class="list-group-item list-group-item-light">Flipkart to Create 70000 New Jobs in India Ahead of Festival Season</li>
-                        <li class="list-group-item list-group-item-light">Social Media Health Concerns</li>
-                    </ul>
-                    </p>
+                    <h3 class="mt-2 mb-3">Today's Tech Trivia</h3>
+                    <p>Before becoming Google's smartphone OS, Android was being developed for what kind of device?</p>
+                    <div class="card-header" id="triviaHeading" style="cursor: pointer">
+                          <p class="text-muted text-left mb-0" data-toggle="collapse" data-target="#triviaCollapse" aria-expanded="true" aria-controls="triviaCollapse">
+                            Click for Answer
+                          </p>
+                      </div>
+                      <div id="triviaCollapse" class="collapse" aria-labelledby="triviaHeading" data-parent="#accordion">
+                        <div class="card-body">
+                            <h5>Cameras</h5>
+                            <p>According to Android Inc. founder Andy Rubin, the software that became the company's Android smartphone OS was originally designed to be used in "smart cameras" but was later repurposed for handsets after it was realized that the market for digital cameras was waning. His original pitch to investors in April 2004 showed a camera that would connect to a home computer (wired or wireless) that would then connect to an Android datacenter.</p>
+                            <small class="text-muted">Source: <a style="text-decoration: none;" href="https://www.techspot.com/">TechSpot</a></small>
+                        </div>
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>
