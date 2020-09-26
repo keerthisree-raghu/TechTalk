@@ -2,7 +2,7 @@
 
 TechTalk is a simple blog application for tech-enthusiasts to create content and communicate about trending topics in the world of tech.
 
-This project has been submitted for evaluation as my CS50 Final Project which is a part of the [CS50x 2020 OpenCourseware](https://cs50.harvard.edu/x/2020/) series. 
+This project has been submitted for evaluation as my CS50 Final Project which is a part of the [CS50x 2020 OpenCourseWare](https://cs50.harvard.edu/x/2020/) series.
 
 ## Prerequisites
 
